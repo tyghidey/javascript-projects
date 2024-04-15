@@ -20,6 +20,11 @@ function findMinValue(arr){
 
 //Your function here...
 
+function findArrLeastToGreat (array) {
+  let findArrLeastToGreat = [];
+  findArrLeastToGreat.push(findArrLeastToGreat)};
+  array.pop
+}
 /* BONUS MISSION: Refactor your sorting function to use recursion below:
  */
 

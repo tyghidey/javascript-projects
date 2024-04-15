@@ -12,10 +12,14 @@ let desserts = [];
 function mealAssembly(protein, grains, veggies, beverages, desserts, numMeals) {
   let pantry = [protein, grains, veggies, beverages, desserts];
   let meals = [];
-  
+  let meal = [];
   /// Part A #2: Write a ``for`` loop inside this function
   /// Code your solution for part A #2 below this comment (and above the return statement) ... ///
 
+  for (let i = 0; i < numMeals; i++) {
+    for (let j = 0; j< pantry.length; j++) {
+      meal.push(pantry[i][j])
+  }
 
   return meals;
 }
@@ -25,7 +29,9 @@ function askForNumber() {
   numMeals = input.question("How many meals would you like to make?");
   
   /// CODE YOUR SOLUTION TO PART B here ///
-
+while (numMeals > 6 || numMeals < 1 || isNaN(numMeals)) {
+  numMeals = input.question("Invalid entry: How many meals would you like tomake?")
+}
   return numMeals;
 }
 
@@ -45,8 +51,8 @@ function runProgram() {
   /// Change the final input variable (aka numMeals) here to ensure your solution makes the right number of meals ///
   /// We've started with the number 2 for now. Does your solution still work if you change this value? ///
   
-  // let meals = mealAssembly(protein, grains, veggies, beverages, desserts, 2);
-  // console.log(meals)
+  let meals = mealAssembly(protein, grains, veggies, beverages, desserts, 2);
+  console.log(meals)
   
 
   /// TEST PART B HERE ///
